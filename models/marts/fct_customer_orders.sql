@@ -12,7 +12,7 @@ customer_orders as (
         c.first_name,
         c.last_name,
         c.email,
-        0 as active_flag,
+        1 as active_flag,
         count(o.order_id) as total_orders,
         coalesce(sum(o.amount),0) as total_amount,
         min(o.order_date) as first_order_date,
